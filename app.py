@@ -60,9 +60,9 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for(
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for(
                         "profile", username=session["user"]))
             else:
                 # invalid password match
@@ -95,6 +95,29 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "recipes_name": request.form.get("recipes_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+            "image": request.form.get("image"),
+            "created_by": session["user"],
+            "views": 0
+        }
+        mongo.db.tasks.insert_one(recipe)
+        flash("Task Successfully Added")
+        return redirect(url_for("get_recipe"))
+
+    recipes = mongo.db.categories.find().sort("recipe_name", 1)
+    return render_template("add_recipe.html", recipes=recipes)
+
+
 
 
 if __name__ == "__main__":
