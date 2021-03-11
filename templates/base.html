@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>Balkan Flavors</title>
+    <title>Balkan Flavours</title>
 </head>
 <body>
     <header>
         <!-- top navbar -->
 		<nav class="nav-extended text-shadow brown lighten-4">
 			<div class="nav-wrapper">
-				<a href="{{ url_for('get_recipes') }}" class="brand-logo">Balkan Flavors</a>
+				<a href="{{ url_for('get_recipes') }}" class="brand-logo">Balkan Flavours</a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="{{ url_for('get_recipes') }}">Home</a></li>

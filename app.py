@@ -97,12 +97,9 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_recipe", methods=["GET", "POST"])
+@app.route("/add_recipe")
 def add_recipe():
-    recipe = mongo.db.recipe.find().sort("recipe_category", 1)
-    return render_template("add_recipe.html", recipe=recipe)
-
-
+    return render_template("add_recipe.html")
 
 
 
