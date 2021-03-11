@@ -4,13 +4,14 @@
     <ul class="collapsible">
         {% for recipe in recipes %}
         <li>
-            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+            <div class="collapsible-header  brown text-brown lighten-1 text-shadow">
                 <i class="fas fa-caret-down"></i>
                 <strong>{{ recipe.recipe_name }}</strong> 
             </div>
             <div class="collapsible-body">
                 <strong>{{ recipe.recipes_name }}</strong>
                 <p>{{ recipe.recipe_description }}</p>
+                <p><em>By: {{ recipe.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}
