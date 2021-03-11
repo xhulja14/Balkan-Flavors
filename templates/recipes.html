@@ -6,9 +6,15 @@
     <ul class="collapsible">
         {% for recipe in recipes %}
         <li>
-            <div class="collapsible-header  brown text-brown lighten-1 text-shadow">
-                <i class="fas fa-caret-down"></i>
-                <strong>{{ recipe.recipe_name }}</strong> 
+            <div class="collapsible-header white-text brown lighten-1 text-shadow">
+                <div class="col s3">
+                    <i class="fas fa-caret-down"></i>
+                    <a href="" class="btn-small brown lighten-4">Done</a>
+                    <a href="" class="btn-small brown lighten-3">Edit</a>
+                </div>
+                <div class="col s9">
+                    <strong>{{ recipe.recipe_name }}</strong>
+                </div>
             </div>
             <div class="collapsible-body">
                 <strong>{{ recipe.recipes_name }}</strong>
