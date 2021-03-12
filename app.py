@@ -123,7 +123,7 @@ def edit_recipe(recipe_id):
             "recipe_description": request.form.get("recipe_description"),
             "created_by": session["user"]
         } 
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)},submit)
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -136,6 +136,13 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
+
+
+@app.route("/get_menu")
+def get_menu():
+    menu = list(mongo.db.menu.find().sort("recipe_name", 1))
+    return render_template("categories.html", menu=menu)
+
 
 
 if __name__ == "__main__":

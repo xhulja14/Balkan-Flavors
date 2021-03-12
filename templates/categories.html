@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="text-brown lighten-1 center-align">Manage Recipes</h3>
+
+<div class="row">
+        {% for category in menu %}
+            <div class="col s12 m3">
+                <div class="card brown lighten-1 text-shadow text-shadow center-align">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{ category.menu_category }}</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn-small brown lighten-4">Edit</a>
+                        <a href="#" class="btn-small brown lighten-3">Delete</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
