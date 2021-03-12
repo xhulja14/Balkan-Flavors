@@ -144,6 +144,17 @@ def get_menu():
     return render_template("categories.html", menu=menu)
 
 
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    if request.method == "POST":
+        category = {
+            "menu_category": request.form.get("menu_category")
+        }
+        mongo.db.menu.insert_one(category)
+        flash("New Category Added")
+    return render_template("add_category.html")
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
