@@ -23,6 +23,8 @@ mongo = PyMongo(app)
 def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
+    four_recipes = mongo.db.recipes.find().limit(4)
+    return render_template('recipes.html', title="Home", recipes=four_recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -104,13 +106,27 @@ def add_recipe():
             "recipe_name": request.form.get("recipe_name"),
             "recipes_name": request.form.get("recipes_name"),
             "recipe_description": request.form.get("recipe_description"),
-            "created_by": session["user"]
+            "ingredients": request.form.get("ingredients"),
+            "directions": request.form.get("directions"),
+            "created_by": session["user"],
+            "views": 0
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
         return redirect(url_for("get_recipes"))
     menu = mongo.db.menu.find().sort("menu_category", 1)
     return render_template("add_recipe.html", menu=menu)
+
+
+@app.route("/recipe/<recipe_id>")
+def recipe(recipe_id):
+    # Shows full recipe and increments view
+    mongo.db.recipes.find_one_and_update(
+        {'_id': ObjectId(recipe_id)},
+        {'$inc': {'views': 1}}
+    )
+    recipe_db = mongo.db.recipes.find_one_or_404({'_id': ObjectId(recipe_id)})
+    return render_template('recipes.html', recipe=recipe_db)
 
 
 
