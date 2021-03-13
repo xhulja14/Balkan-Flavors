@@ -14,7 +14,7 @@
 <body>
     <header>
         <!-- top navbar -->
-		<nav class="nav-extended text-shadow brown lighten-4">
+		<nav class="nav-extended text-shadow  brown lighten-1">
 			<div class="nav-wrapper">
 				<a href="{{ url_for('get_recipes') }}" class="brand-logo">Balkan Flavours</a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
@@ -37,7 +37,7 @@
 
         <!-- mobile sidenav -->
 		<ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align brown lighten-4">Balkan Flavors</h4></li>
+            <li><h4 class="center-align brown-text text-darken-4">Balkan Flavors</h4></li>
             <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
@@ -70,7 +70,7 @@
         {% block content %}
         {% endblock %}
     </main>
-
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
