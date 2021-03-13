@@ -33,12 +33,10 @@ def register():
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
-
-        register = {
+            register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
@@ -57,7 +55,6 @@ def login():
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
@@ -70,13 +67,11 @@ def login():
                 # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
-
         else:
             # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
-
-    return render_template("login.html")
+            return render_template("login.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -84,11 +79,9 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-
     if session["user"]:
         return render_template("profile.html", username=username)
-
-    return redirect(url_for("login"))
+        return redirect(url_for("login"))
 
 
 @app.route("/logout")
@@ -195,4 +188,4 @@ def delete_category(category_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

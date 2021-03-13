@@ -39,8 +39,14 @@ This project is made for users to view recipes, create recipes, update their own
 ## Testing
 
 * I have been doing testing manualy and everything is working as expected , everything is functional and app runing without errors.
-* I used V3C Markup Validator for testing
-* I used Python compliant to PEP8 for testing
+  When i click on home page i can see pictures and recipes, im able to add, edit or delete recipe.
+  If an admin login in they can see recipes they can add recipes, edit them or delete them, also they can add categories.
+  So all CRUD funcionality is working as expected.
+
+* I used W3C Markup Validator for testing.
+  All the pages passing without errors.
+
+
 
 ## Deployment
 The project is hosted on Heroku. For it to run correctly the following is required:
