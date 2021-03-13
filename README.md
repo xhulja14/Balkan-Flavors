@@ -1,45 +1,65 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome xhulja14,
+## Balkan Flavours (Recipe cookbook Project)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## This project is created to put into practice the skills learned during the course, especially with the use of Flask and Mongo Db backend coding, and frontend framework called Materialize.
+I decided to create a recipe app where the users will be able to see recipes, add recipes, update them and delete them.
+Using the CRUD calls to a Mongo database this project is very functional and working as expected.
+With the help of Materialize framework makes it easier for archiving good user experience.
+This project is made for users to view recipes, create recipes, update their own recipes, and delete their recipes.
 
-## Gitpod Reminders
+## UX
+## Users stories
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* Users can see recipes.
+* Users can register and create an account.
+* Users can add recipe.
+* Users can update their recipes.
+* Users can delete a recipe.
+* All visitors should be able to have all the information needed for a recipe such as ingredients, directions of cooking and of course visualy they can see how the food looks on the picture.
 
-`python3 -m http.server`
+## Features
 
-A blue button should appear to click: *Make Public*,
+* Used a simple user registration, the password is encrypted using generate_password_hash function from Werkzeug Security module.
+* User can login and is able to create edit, delete his own recipe.
+* List all recipes created by the user, with the option to edit or delete the recipe.
+* Getting flash mesagges once the recipe is added, updated or deleted.
+* Carousel used with pictures and external links which direct the user to a full recipe ingredients and directions of cooking.
+* Able to see the most viewed recipes.
 
-Another blue button should appear to click: *Open Browser*.
+## Technologies
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* Python3
+ 
+* HTML5
+* CSS /Materialize
+* JS / JQuery
+* Mongo
+* Flask
 
-A blue button should appear to click: *Make Public*,
+## Testing
 
-Another blue button should appear to click: *Open Browser*.
+* I have been doing testing manualy and everything is working as expected , everything is functional and app runing without errors.
+* I used V3C Markup Validator for testing
+* I used Python compliant to PEP8 for testing
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Deployment
+The project is hosted on Heroku. For it to run correctly the following is required:
 
-## Updates Since The Instructional Video
+A Procfile that instructs Heroku how to run the app.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+requirements.txt. This file informs Heroku what dependencies are required to run the app correctly. It is created by typing on the terminal pip freeze > requirements.txt.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Create a new app in Heroku
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Setup in Heroku the environment variables required to successfully run the app in Settings, Config Vars.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* MONGO_DBNAME
+* MONGO_URI
+* SECRET_KEY
+* PORT
+* IP
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Connect Heroku to the project's repository on Github and setup automatic deployment. Heroku then will build a new version of the app every time a new deployment is pushed to Github.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
 
 Happy coding!
