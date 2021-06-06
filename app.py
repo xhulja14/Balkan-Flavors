@@ -23,9 +23,6 @@ mongo = PyMongo(app)
 def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
-    four_recipes = mongo.db.recipes.find().limit(4)
-    return render_template('recipes.html', title="Home", recipes=four_recipes)
-
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -188,4 +185,4 @@ def delete_category(category_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)
