@@ -50,7 +50,9 @@ This project is made for users to view recipes, create recipes, update their own
 * [Register-page](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/w3c%20register-page.png) no errors found.
 * [Add-recipe-page](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/w3c%20add.png) passing without errors.
 
+## Bugs
 
+Known bug in my workspace [MONGO_URI](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/bug.png) i have create this variable in my heroku app but is not getting retreived.
 
 ## Deployment
 The project is hosted on Heroku. For it to run correctly the following is required:
