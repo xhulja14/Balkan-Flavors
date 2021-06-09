@@ -28,30 +28,34 @@ This project is made for users to view recipes, create recipes, update their own
 
 ## Technologies
 
-* Python3
- 
-* HTML5
-* CSS /Materialize
-* JS / JQuery
-* Mongo
-* Flask
+* [Python3](https://www.python.org/)
+* [HTML5](https://html.com/)
+* [CSS /Materialize](https://materializecss.com/)
+* [JS / JQuery](https://jquery.com/)
+* [Mongodb](https://cloud.mongodb.com/)
+* [Flask](https://flask.palletsprojects.com/)
 
 ## Testing
 
 * I have been doing testing manualy and everything is working as expected , everything is functional and app runing without errors.
-  When i click on home page i can see pictures and recipes, im able to add, edit or delete recipe.
-  If an admin login in they can see recipes they can add recipes, edit them or delete them, also they can add categories.
+  When i click on [home page](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/home-page.png) i can see pictures and recipes, im able to [add](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/added-recipe.png) recipe, [edit](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/edit-page.png) recipe or [delete](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/delete-page.png) recipe.
+  As a user im able to [register](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/registration-page.png) and log in and see a [profile](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/profile-page.png) page
+  If an admin [login](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/home-page.png) in they can see recipes they can [add](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/added-recipe.png) recipes, [edit](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/edit-page.png) them or [delete](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/delete-page.png) them, also they can add categories.
+  And the user can successfully [logout](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/logout-page.png).
   So all CRUD funcionality is working as expected.
 
 * I used W3C Markup Validator for testing.
   All the pages passing without errors.
+* [Login-page](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/w3c%20login-page.png) passing without errors.
+* [Register-page](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/w3c%20register-page.png) no errors found.
+* [Add-recipe-page](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/w3c%20add.png) passing without errors.
 
 
 
 ## Deployment
 The project is hosted on Heroku. For it to run correctly the following is required:
 
-A Procfile that instructs Heroku how to run the app.
+A Procfile that instructions Heroku how to run the app.
 
 requirements.txt. This file informs Heroku what dependencies are required to run the app correctly. It is created by typing on the terminal pip freeze > requirements.txt.
 
