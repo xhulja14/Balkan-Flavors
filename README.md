@@ -71,5 +71,5 @@ Setup in Heroku the environment variables required to successfully run the app i
 
 Connect Heroku to the project's repository on Github and setup automatic deployment. Heroku then will build a new version of the app every time a new deployment is pushed to Github.
 
-
+[Deployment on Heroku]( https://flask-balkan-flavors-project.herokuapp.com/)
 Happy coding!
