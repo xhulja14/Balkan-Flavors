@@ -11,9 +11,9 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.secret_key = os.environ.get("SECRET_KEY")
+app.config["MONGO_DBNAME"] = "balkan_recipes"
+app.config["MONGO_URI"] = "mongodb+srv://xhulja14:Lalushi1@myfirstcluster.7g5ug.mongodb.net/balkan_recipes?retryWrites=true&w=majority"
+app.secret_key = "nM,)J3gK`ZpPz?%#OXUGm)fh/|h~Ur"
 
 mongo = PyMongo(app)
 
@@ -34,7 +34,7 @@ def register():
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
-            register = {
+        register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
@@ -69,7 +69,7 @@ def login():
             # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
-            return render_template("login.html")
+    return render_template("login.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
