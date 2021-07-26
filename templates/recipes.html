@@ -2,12 +2,12 @@
 {% block content %}
 
 <h3 class="text-brown lighten-1 center-align">All Recipes</h3>
-<div class="container">
+<div class="container1">
     <div class="row">
         <div class="carousel text-brown center-align">
             <a class="carousel-item brown-text text-darken-4"
                 href="#"><img src="static/images/Baklava%281%29.png"
-                    alt="Baklava">Baklava</a>
+                    alt="Baklava">Baklava</a><span class="large new badge brown"></span>
             <a class="carousel-item brown-text text-darken-4"
                 href="#"><img src="static/images/Mussaka.jpg"
                     alt="Mousaka">Mousaka</a>
@@ -19,14 +19,13 @@
                     alt="Tripe soup">Tripe soup</a>
             <a class="carousel-item brown-text text-darken-4"
                 href="#"><img
-                    src="static/images/tullumba.jpg" alt="Tullumba">Tulumba</a>
+                    src="static/images/tullumba.jpg" alt="Tullumba">Tullumba</a>
             <a class="carousel-item brown-text text-darken-4"
                 href="#"><img src="static/images/Ouzo.jpg"
                     alt="Ouzo">Ouzo</a>
         </div>
     </div>
 </div>
-
 {% for recipe in recipes %}
 <section id="middle">
     <div class="container">
@@ -67,13 +66,37 @@
                                 <p><em>By: {{ recipe.created_by }}</em></p>
                             </div>
                             </li>
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>
-            </div>
-        </section>
+        </div>
+    </div>
+</section>
 {% endfor %}
-</div>
+<footer class="page-footer text-shadow  brown lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col m6 s12">
+          <h5 class="white-text">Site Posts</h5>
+          <p class="grey-text text-lighten-3">Balkan Flavours is a site about Balkan recipes and Balkan cuisine.
+            I will post most delicious and most popular recipes from Balkan cuisine. </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Contact Us</h5>
+          <p class="grey-text text-lighten-3">Want to ask me something about my site or recipes? 
+            Or you just want to clarify something more? Then feel free to contact me!</p>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/BalkanFoodRecipes/"><i class="material-icons">facebook</i></a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.google.com/gmail/about"><i class="material-icons">email</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright center-align">
+      <div class="container">
+      © 2021 Copyright 
+      </div>
+    </div>
+  </footer>
 {% endblock %}
