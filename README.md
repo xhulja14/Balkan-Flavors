@@ -1,21 +1,83 @@
 
-## Balkan Flavours (Recipe cookbook Project)
+# Balkan Flavours 
 
-## This project is created to put into practice the skills learned during the course, especially with the use of Flask and Mongo Db backend coding, and frontend framework called Materialize.
-I decided to create a recipe app where the users will be able to see recipes, add recipes, update them and delete them.
-Using the CRUD calls to a Mongo database this project is very functional and working as expected.
-With the help of Materialize framework makes it easier for archiving good user experience.
-This project is made for users to view recipes, create recipes, update their own recipes, and delete their recipes.
+## Recipe cookbook Project
 
-## UX
-## Users stories
+## This project is created to give the users information about the Balkan Cuisine and share with them most popular recipes. For making this project functional i put into practice the skills learned during the course.
+As a food lover I want to share with the world Balkan cuisine.
+I think the users will have the opportunity to learn new recipes from different countries.
 
-* Users can see recipes.
-* Users can register and create an account.
-* Users can add recipe.
-* Users can update their recipes.
-* Users can delete a recipe.
-* All visitors should be able to have all the information needed for a recipe such as ingredients, directions of cooking and of course visualy they can see how the food looks on the picture.
+# Contents:
+
+* UX
+* Project Goals
+* Target Audience Goals
+* Site Owner Goals
+* User Stories
+* User Requirements and Expectations
+* Images
+* Wireframes
+* Testing
+* Bugs
+* Static files
+* Deployment
+  
+## Features
+
+* Features that have been developed
+* Technologies Used
+* Planning + Testing:
+* Bugs
+* Deployment
+  
+# UX (User Experience)
+
+## Project Goals
+* The main goal for this project is to share some delicious recipes from Balkan cuisine.
+* The project is created for all people who have interest on cooking and want to explore more ways on preparing their meals.
+* The website needs to be attractive and interactive providing an good User Experience to everyone who will use this site.
+* I want to offer access for the users to register and be part of this site by sharing their own recipes.
+
+## User Goals:
+
+* A website that provides a good experience.
+* Visual interaction is important to give the idea how the food looks after preparetion.
+* To have access on the website by registering and login.
+* Having all the details needed for a recipe such as ingredients and directions.
+* Adding own recipes and save, update and delete them.
+* A website that works on mobile , tablet , desktop.
+
+## User Stories:
+
+* Inna: " As a user i want to learn about different countries cuisine."
+* Adela M : " When i visit such sites i want to be able to register, login and share my recipes with other users."
+* Tom : " I want to navigate and get information about tradicional food in Balkan. "
+* Arion : "When i share my recipes i would like to have full access on my recipes so i can update or delete if is needed"
+
+## Site Owner Goals:
+
+* Make interactive website and get the users enjoy their navigation.
+* Make it easy for the users to navigate, find information and details for each recipe.
+* Offer different categories of recipes and different countries traditional food.
+* Visually pleasing and a good description of the recipes.
+
+## User Requirements and Expectations:
+
+* Requirements:
+  *  Use an interactive website and find interesting recipes.
+  * Provide information of the recipes in details to make it easy to understand.
+  * Need to see images of different food..
+  * To be able to share and save my recipes on this site.
+
+* Expectations:
+  * When you click on a recipe to provide all important details such as ingredients and directions.
+  * When adding own recipe to be able to save them on this site .
+  * Content to be informative and visually pleasing.
+  * Receive flashing messages for all the actions taken by the user .
+
+## Images:
+* I used images from google for this project.
+
 
 ## Features
 
@@ -38,21 +100,21 @@ This project is made for users to view recipes, create recipes, update their own
 ## Testing
 
 * I have been doing testing manualy and everything is working as expected , everything is functional and app runing without errors.
-  When i click on [home page](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/home-page.png) i can see pictures and recipes, im able to [add](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/added-recipe.png) recipe, [edit](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/edit-page.png) recipe or [delete](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/delete-page.png) recipe.
-  As a user im able to [register](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/registration-page.png) and log in and see a [profile](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/profile-page.png) page
-  If an admin [login](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/home-page.png) in they can see recipes they can [add](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/added-recipe.png) recipes, [edit](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/edit-page.png) them or [delete](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/delete-page.png) them, also they can add categories.
-  And the user can successfully [logout](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/logout-page.png).
+  When i click on [home page](/static/images/home-page.png) i can see pictures and recipes, im able to [add](/static/images/added-recipe.png) recipe, [edit](/static/images/edit-page.png) recipe or [delete](/static/images/delete-page.png) recipe.
+  As a user im able to [register](/static/images/registration-page.png) and log in and see a [profile](/static/images/profile-page.png) page
+  If an admin [login](/static/images/home-page.png) in they can see recipes they can [add](/static/images/added-recipe.png) recipes, [edit](/static/images/edit-page.png) them or [delete](/static/images/delete-page.png) them, also they can add categories.
+  And the user can successfully [logout](/static/images/logout-page.png).
   So all CRUD funcionality is working as expected.
 
 * I used W3C Markup Validator for testing.
   All the pages passing without errors.
-* [Login-page](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/w3c%20login-page.png) passing without errors.
-* [Register-page](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/w3c%20register-page.png) no errors found.
-* [Add-recipe-page](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/w3c%20add.png) passing without errors.
+* [Login-page](/static/images/w3c%20login-page.png) passing without errors.
+* [Register-page](/static/images/w3c%20register-page.png) no errors found.
+* [Add-recipe-page]/static/images/w3c%20add.png) passing without errors.
 
 ## Bugs
 
-Known bug in my workspace [MONGO_URI](https://browser-tomato-rook-szaxe467.ws-eu08.gitpod.io/workspace/Balkan-Flavours/static/css/images/bug.png) i have create this variable in my heroku app but is not getting retreived.
+Known bug in my workspace [MONGO_URI](/static/images/bug.png) i have create this variable in my heroku app but is not getting retreived.
 
 ## Deployment
 The project is hosted on Heroku. For it to run correctly the following is required:
