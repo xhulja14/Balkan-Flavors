@@ -1,7 +1,7 @@
 
 # Balkan Flavours 
 
-## Recipe cookbook Project
+![Recipe cookbook Project](/static/images/am-i-responsive.png)
 
 ## This project is created to give the users information about the Balkan Cuisine and share with them most popular recipes. For making this project functional i put into practice the skills learned during the course.
 As a food lover I want to share with the world Balkan cuisine.
@@ -78,6 +78,14 @@ I think the users will have the opportunity to learn new recipes from different 
 ## Images:
 * I used images from google for this project.
 
+## Wireframes:
+ * Created a simple wireframes by using [Balsamiq](https://chrome.google.com/webstore/detail/balsamiq-wireframes-free/imbfadckkgblfbkinjejdeobpfbcopgb)
+ * I saved my wireframes as [PDF](https://acrobat.adobe.com/ie/en/acrobat/features.html?mv=search&sdid=QTV3P4CL&ef_id=121a635018a0184689a703e432189a83:G:s&s_kwcid=AL!3085!10!78890085992494!78890351607325&msclkid=121a635018a0184689a703e432189a83)
+* My wireframes :
+
+    * [Phone wireframe](/workspace/Balkan-Flavours/static/images/wireframes/phone.png)
+    * [Tablet wireframe](/workspace/Balkan-Flavours/static/images/wireframes/tablet.png)
+    * [Browser wireframe](/workspace/Balkan-Flavours/static/images/wireframes/desktop.png)
 
 ## Features
 
