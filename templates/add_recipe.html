@@ -2,7 +2,7 @@
 {% block content %}
 
     <h3 class="text-brown lighten-1 center-align">Add Recipe</h3>
-
+<!--category-->
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
             <div class="row">
@@ -17,7 +17,7 @@
 					<label for="menu_category">Menu Category</label>
 				</div>
             </div>
-            <!--recipe name-->
+<!--recipe name-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix text-brown lighten-1"></i>
@@ -26,7 +26,7 @@
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
-            <!--recipe description-->
+<!--recipe description-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix text-brown lighten-1"></i>
@@ -35,7 +35,7 @@
                     <label for="recipe_description">Recipe Description</label>
                 </div>
             </div>
-            <!--ingredients-->
+<!--ingredients-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-folder prefix text-brown lighten-1"></i>
@@ -44,6 +44,7 @@
                     <label for="ingredients">Ingredients</label>
                 </div>
             </div>
+<!--directions-->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix text-brown lighten-1"></i>
@@ -52,7 +53,7 @@
                     <label for="directions">Directions</label>
                 </div>
             </div>
-            <!-- submit button -->
+<!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">
                     <button type="submit" class="btn-large brown text-brown lighten-1 text-shadow">
@@ -60,7 +61,6 @@
                     </button>
                 </div>
             </div>
-	
         </form>
     </div>
 
