@@ -90,10 +90,11 @@
 
 * Used a simple user registration, the password is encrypted using generate_password_hash function from [Werkzeug](https://pypi.org/project/Werkzeug/) Security module by using (pip install -U Werkzeug) command.
 * Used [Mongodb](https://cloud.mongodb.com/)  document database to host all the data of my site such as recipes, usernames ect.
-  
 * User can login and is able to create edit, delete his own recipe.
+* Created an admin for the site giving access to add more categories, update or delete categories. If You like to login as an admin
+  here you have admin credentials (*__username : admin__*), (*__password : Lalushi1__*)
 * List all recipes created by the user, with the option to edit or delete the recipe.
-* Getting flash mesagges once the recipe is added, updated or deleted.
+* Getting flash mesagges once the recipe/category is added, updated and getting confirmation prompts when trying to delete a recipe/category.
 * Carousel used with pictures of new recipes.
 
 
