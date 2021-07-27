@@ -13,16 +13,17 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.secret_key =os.environ.get("SECRET_KEY")
+app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
 
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
-    
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -55,10 +56,10 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
-                return redirect(url_for(
+                    existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(request.form.get("username")))
+                    return redirect(url_for(
                         "profile", username=session["user"]))
             else:
                 # invalid password match
@@ -119,7 +120,6 @@ def recipe(recipe_id):
     return render_template('recipes.html', recipe=recipe_db)
 
 
-
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -128,7 +128,7 @@ def edit_recipe(recipe_id):
             "recipes_name": request.form.get("recipes_name"),
             "recipe_description": request.form.get("recipe_description"),
             "created_by": session["user"]
-        } 
+            } 
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
 
@@ -170,7 +170,7 @@ def edit_category(category_id):
         mongo.db.menu.update({"_id": ObjectId(category_id)}, submit)
         flash("Category Successfully Updated")
         return redirect(url_for("get_menu"))
-        
+
     category = mongo.db.menu.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
 

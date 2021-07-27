@@ -3,9 +3,7 @@
 
 ![Recipe cookbook Project](/static/images/am-i-responsive.png)
 
-## This project is created to give the users information about the Balkan Cuisine and share with them most popular recipes. For making this project functional i put into practice the skills learned during the course.
-As a food lover I want to share with the world Balkan cuisine.
-I think the users will have the opportunity to learn new recipes from different countries.
+ As a food lover I want to share with the world Balkan cuisine. This project is created to give the users information about the Balkan Cuisine and share with them most popular recipes. I think the users will have the opportunity to learn new recipes from different countries.
 
 # Contents:
 
@@ -37,6 +35,7 @@ I think the users will have the opportunity to learn new recipes from different 
 * The project is created for all people who have interest on cooking and want to explore more ways on preparing their meals.
 * The website needs to be attractive and interactive providing an good User Experience to everyone who will use this site.
 * I want to offer access for the users to register and be part of this site by sharing their own recipes.
+* For making this project functional i put into practice the skills learned during the course.
 
 ## User Goals:
 
@@ -89,59 +88,84 @@ I think the users will have the opportunity to learn new recipes from different 
 
 ## Features
 
-* Used a simple user registration, the password is encrypted using generate_password_hash function from Werkzeug Security module.
+* Used a simple user registration, the password is encrypted using generate_password_hash function from [Werkzeug](https://pypi.org/project/Werkzeug/) Security module by using (pip install -U Werkzeug) command.
+* Used [Mongodb](https://cloud.mongodb.com/)  document database to host all the data of my site such as recipes, usernames ect.
+  
 * User can login and is able to create edit, delete his own recipe.
 * List all recipes created by the user, with the option to edit or delete the recipe.
 * Getting flash mesagges once the recipe is added, updated or deleted.
-* Carousel used with pictures and external links which direct the user to a full recipe ingredients and directions of cooking.
-* Able to see the most viewed recipes.
+* Carousel used with pictures of new recipes.
 
-## Technologies
 
+# Technologies Used
+
+## Languages:
 * [Python3](https://www.python.org/)
 * [HTML5](https://html.com/)
 * [CSS /Materialize](https://materializecss.com/)
 * [JS / JQuery](https://jquery.com/)
 * [Mongodb](https://cloud.mongodb.com/)
 * [Flask](https://flask.palletsprojects.com/)
+  
+## Tools and Libraries:
+
+* [Git](https://git-scm.com/)
+* [Bootstrap](https://maps.google.com/)
+* [Jquery](https://jquery.com/)
+* [Font-Awesome](https://fontawesome.com/)
+* [TinyPng](https://tinypng.com/) __(image compression)__
+* [Am-I-Responsive](http://ami.responsivedesign.is/)
+* [W3-Official-Validator](https://validator.w3.org/)
+* [Heroku](https://dashboard.heroku.com/)
+* [MongoDb](https://www.mongodb.com/)
+* [Materialize](https://materializecss.com/)
+* [Pep8](https://pep8.org/)
 
 ## Testing
 
 * I have been doing testing manualy and everything is working as expected , everything is functional and app runing without errors.
-  When i click on [home page](/static/images/home-page.png) i can see pictures and recipes, im able to [add](/static/images/added-recipe.png) recipe, [edit](/static/images/edit-page.png) recipe or [delete](/static/images/delete-page.png) recipe.
-  As a user im able to [register](/static/images/registration-page.png) and log in and see a [profile](/static/images/profile-page.png) page
-  If an admin [login](/static/images/home-page.png) in they can see recipes they can [add](/static/images/added-recipe.png) recipes, [edit](/static/images/edit-page.png) them or [delete](/static/images/delete-page.png) them, also they can add categories.
-  And the user can successfully [logout](/static/images/logout-page.png).
+* When testing i need to check every page and their functionality.
+* When i click on [home page](/static/images/home-page.png) i can see pictures and recipes, 
+* im able to [add](/static/images/added-recipe.png) recipe, 
+* [edit](/static/images/edit-page.png) recipe or [delete](/static/images/delete-page.png) recipe.
+* As a user im able to [register](/static/images/registration-page.png) and log in and see a [profile](/static/images/profile-page.png) page
+* If an admin [login](/static/images/home-page.png) in they can see recipes they can [add](/static/images/added-recipe.png) recipes,
+*  [edit](/static/images/edit-page.png) them or [delete](/static/images/delete-page.png) them, also they can add categories.
+*  And the user can successfully [logout](/static/images/logout-page.png).
   So all CRUD funcionality is working as expected.
 
+* I also used DevTools to check if is any error on my website, and everything is working as expected without errors.
+
 * I used W3C Markup Validator for testing.
+* First step is by copping the URL of my project and check it if is any error.
   All the pages passing without errors.
-* [Login-page](/static/images/w3c%20login-page.png) passing without errors.
-* [Register-page](/static/images/w3c%20register-page.png) no errors found.
-* [Add-recipe-page]/static/images/w3c%20add.png) passing without errors.
+* [Login-page](/static/images/w3c-login-page.png) passing without errors.
+* [Register-page](/static/images/w3c-register-page.png) no errors found.
+* [Add-recipe-page](/static/images/w3c-add.png) passing without errors.
 
-## Bugs
-
-Known bug in my workspace [MONGO_URI](/static/images/bug.png) i have create this variable in my heroku app but is not getting retreived.
+* Manualy tested python code through [PEP8](http://pep8online.com/) passing withot errors.
+  [pep8 checker](/static/images/pep8.png)
 
 ## Deployment
 The project is hosted on Heroku. For it to run correctly the following is required:
 
-A Procfile that instructions Heroku how to run the app.
+* A Procfile that instructions Heroku how to run the app.
+  To run this site use *__python app.py__*
+* requirements.txt. This file informs Heroku what dependencies are required to run the app correctly. It is created by typing on the terminal pip freeze > requirements.txt.
 
-requirements.txt. This file informs Heroku what dependencies are required to run the app correctly. It is created by typing on the terminal pip freeze > requirements.txt.
+* Create a new app in Heroku
 
-Create a new app in Heroku
+* Setup in Heroku the environment variables required to successfully run the app in Settings, Config Vars.
 
-Setup in Heroku the environment variables required to successfully run the app in Settings, Config Vars.
-
-* MONGO_DBNAME
-* MONGO_URI
-* SECRET_KEY
-* PORT
-* IP
+  * MONGO_DBNAME
+  * MONGO_URI
+  * SECRET_KEY
+  * PORT
+  * IP
 
 Connect Heroku to the project's repository on Github and setup automatic deployment. Heroku then will build a new version of the app every time a new deployment is pushed to Github.
 
 [Deployment on Heroku]( https://flask-balkan-flavors-project.herokuapp.com/)
+
+
 Happy coding!
